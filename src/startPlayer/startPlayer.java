@@ -2,35 +2,23 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package startPlayer;
+package zombieland;
 
-import java.util.Scanner;
 
 /**
  *
  * @author K-Reed
  */
 public class startPlayer {
-
-    /**
-     * @param args the command line arguments
-     */
-    String name;
-    String instructions = "";
-    public static void main(String[] args) {
-      startPlayer myCharacter = new startPlayer();
-      myCharacter.getName();
-      myCharacter.displayHelp();
-    }
-
-public void getName(){
-Scanner input = new Scanner(System.in);
-System.out.println("Enter your name: ");
-this.name = input.next();
-
+ String name;
+ String item1;
+ String item2;
+ String item3;
+ String item4;
+ String item5;
+ 
+ public void displayItems(){
+     System.out.println ("Choose two items" + item1+" "+item2+" "+item3+" "+item4+" "+item5);
+ }
 }
-public void displayHelp(){
-    System.out.println("\nWelcome " + this.name + "\n");
-    System.out.println(this.instructions);
-}
-}
+    
