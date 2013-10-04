@@ -4,11 +4,14 @@
  */
 package zombieland;
 
-
 /**
  *
  * @author K-Reed
  */
+class StartPlayer {
+
+    public StartPlayer() {
+    }
 public class startPlayer {
  String name;
  String item1;
@@ -22,3 +25,4 @@ public class startPlayer {
  }
 }
     
+}
