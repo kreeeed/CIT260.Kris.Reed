@@ -18,6 +18,7 @@ public class Zombieland {
     String name;
     String instructions = "";
     public static void main(String[] args) {
+      StartPlayer myPlayer= new StartPlayer();
       Zombieland myGame = new Zombieland();
       myGame.getName();
       myGame.displayHelp();
