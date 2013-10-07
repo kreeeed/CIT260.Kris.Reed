@@ -22,6 +22,8 @@ public class Zombieland {
       Zombieland myGame = new Zombieland();
       myGame.getName();
       myGame.displayHelp();
+      MainDec mainDecisions= new MainDec();
+      VarDec varDecisions= new VarDec();
     }
 
 public void getName(){
