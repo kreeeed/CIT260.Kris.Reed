@@ -24,6 +24,11 @@ public class Zombieland {
       myGame.displayHelp();
       MainDec mainDecisions= new MainDec();
       VarDec varDecisions= new VarDec();
+      Tutorial tutorial = new Tutorial();
+      tutorial.display();
+      Items items = new Items();
+      items.displayItems();  
+        
     }
 
 public void getName(){
@@ -36,5 +41,4 @@ public void displayHelp(){
     System.out.println("\nWelcome " + this.name + "\n");
     System.out.println(this.instructions);
 }
-
 }

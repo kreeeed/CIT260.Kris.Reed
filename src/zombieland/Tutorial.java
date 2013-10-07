@@ -23,19 +23,8 @@ public class Tutorial {
     public Tutorial() {
         
     }
-    
-    
-        
-    public static void main(String[] args) {
-        Tutorial tutorial = new Tutorial();
-        tutorial.display();
-        
-        Items items = new Items();
-        items.displayItems();  
-        
-    }
-    
-    private void display() {
+
+    public void display() {
         System.out.println(this.welcomeMsg);
     }
     
