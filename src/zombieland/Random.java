@@ -6,30 +6,17 @@ package zombieland;
 
 import java.util.Scanner;
 
-/**
+/*
  *
  * @author Jesse
  */
 public class Random {
-    short age;
-    double weight;
-    String age2;
-    String weight2;
-    public void getStats(){
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter your age: ");
-        this.age2 = input.next();
-        this.age = (short)Integer.parseInt(age2);
-        Scanner input2 = new Scanner(System.in);
-        System.out.println("Enter your weight: ");
-        this.weight2 = input2.next();
-        this.weight = (double)Integer.parseInt(weight2);
-}
-    public void lifeExpect(){
+    public void lifeExpect(short age, double weight){
         if (age<0 ^ age>120){
-            System.out.println("Invalid Input.");
+            System.out.println("Invalid Input. Must be a positive number less than 120.");
+            age = -100;
         }
-        else if (age>0 && age<=15 ){
+        else if (age>=0 && age<=15 ){
             age = 10;
         }
         else if (age>15 && age<=25 ){
@@ -48,9 +35,10 @@ public class Random {
             age = 10;
         }
         if (weight<50 ^ weight>500 ){
-            System.out.println("Invalid Input.");
+            System.out.println("Invalid Input. Must be between 50 and 500.");
+            weight = -100;
         }
-        else if (weight>50 && weight<=100 ){
+        else if (weight>=50 && weight<=100 ){
             weight = 10;
         }
         else if (weight>100 && weight<=150 ){
