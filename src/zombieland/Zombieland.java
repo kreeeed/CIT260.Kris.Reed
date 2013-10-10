@@ -20,15 +20,17 @@ public class Zombieland {
     public static void main(String[] args) {
       StartPlayer myPlayer= new StartPlayer();
       Zombieland myGame = new Zombieland();
-      myGame.getName();
-      myGame.displayHelp();
+        myGame.getName();
+        myGame.displayHelp();
       MainDec mainDecisions= new MainDec();
       VarDec varDecisions= new VarDec();
       Tutorial tutorial = new Tutorial();
-      tutorial.display();
+        tutorial.display();
       Items items = new Items();
-      items.displayItems();  
-        
+        items.displayItems();  
+      Random random = new Random();
+        random.getStats();
+        random.lifeExpect();
     }
 
 public void getName(){

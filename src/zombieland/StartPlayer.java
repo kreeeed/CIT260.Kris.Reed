@@ -19,9 +19,10 @@ public class startPlayer {
  String item3;
  String item4;
  String item5;
+ String item6;
  
  public void displayItems(){
-     System.out.println ("Choose two items" + item1+" "+item2+" "+item3+" "+item4+" "+item5);
+     System.out.println ("Choose two items" + item1+" "+item2+" "+item3+" "+item4+" "+item5+ " " +item6);
  }
 }
     
