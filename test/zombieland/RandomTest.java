@@ -36,61 +36,46 @@ public class RandomTest {
     public void tearDown() {
     }
 
-
     /**
      * Test of lifeExpect method, of class Random.
      */
     @Test
     public void testLifeExpect() {
         System.out.println("lifeExpect-Test 1");
-        short age=15;
-        double weight=150;
-        expectedResult=.5;
-        expectedResult2=50;        
+        short age = 15;
+        double weight = 150;
+        double expResult=35;
         Random instance = new Random();
-        instance.lifeExpect();
+        double result=instance.lifeExpect(age, weight);
+        assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-        
-        
+        //fail("The test case is a prototype.");
+   
         System.out.println("lifeExpect-Test 2");
-        short age=-5;
-        double weight=150;
-        expectedResult=-.75;
-        expectedResult2=-75;        
-        Random instance = new Random();
-        instance.lifeExpect();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-        
+        age = -5;
+        weight = 150;
+        expResult=-75;
+        result=instance.lifeExpect(age, weight);
+        assertEquals(expResult, result, 0.0);
+    
         System.out.println("lifeExpect-Test 3");
-        short age=15;
-        double weight=0;
-        expectedResult=-.75;
-        expectedResult2=-75;        
-        Random instance = new Random();
-        instance.lifeExpect();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        age =15;
+        weight = 0;
+        expResult=-90;
+        result=instance.lifeExpect(age, weight);
+        assertEquals(expResult, result, 0.0);
         
         System.out.println("lifeExpect-Test 4");
-        short age=0;
-        double weight=50;
-        expectedResult=.20;
-        expectedResult2=20;        
-        Random instance = new Random();
-        instance.lifeExpect();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        age = 0;
+        weight = 50;
+        expResult=20;
+        result=instance.lifeExpect(age, weight);
+        assertEquals(expResult, result, 0.0);
         
         System.out.println("lifeExpect-Test 5");
-        short age=120;
-        double weight=500;
-        expectedResult=.1;
-        expectedResult2=10;        
-        Random instance = new Random();
-        instance.lifeExpect();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        age = 120;
+        weight = 500;
+        expResult=10;
+        result=instance.lifeExpect(age, weight);
+        assertEquals(expResult, result, 0.0);
     }
-}
