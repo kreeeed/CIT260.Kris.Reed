@@ -79,3 +79,4 @@ public class RandomTest {
         result=instance.lifeExpect(age, weight);
         assertEquals(expResult, result, 0.0);
     }
+}
