@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author Jesse
  */
 public class Random {
-    public void lifeExpect(short age, double weight){
+    public long lifeExpect(short age, double weight){
         if (age<0 ^ age>120){
             System.out.println("Invalid Input. Must be a positive number less than 120.");
             age = -100;
@@ -63,5 +63,6 @@ public class Random {
     double exp2 = exp * 100;
     short exp3 = (short)exp2;
     System.out.println("Your life expectancy is "+ exp +" or " + exp3+"%");
+    return exp3;
     }
 }
