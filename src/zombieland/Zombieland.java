@@ -29,8 +29,7 @@ public class Zombieland {
       Items items = new Items();
         items.displayItems();  
       Random random = new Random();
-        random.getStats();
-        random.lifeExpect();
+        random.lifeExpect((short)25, 200);
     }
 
 public void getName(){
