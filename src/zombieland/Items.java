@@ -10,21 +10,7 @@ package zombieland;
  */
 public class Items {
     
-    boolean Crowbar; 
-    boolean Medkit;
-    boolean Leather;
-    boolean Crossbow;
-    boolean Shotgun;
-    boolean Pistol;
-    
+    static boolean crowbar, gun, gas, safekey, carkey, car;     
     public Items() {
-    }
-    public void displayItems() {
-        System.out.println("\t\tYou are carrying a crowbar: "+ this.Crowbar);
-        System.out.println("\t\tYou are carrying a medkit: "+ this.Medkit);
-        System.out.println("\t\tYou are wearing a leather jacket: "+ this.Leather);
-        System.out.println("\t\tYou are carrying a crossbow: "+ this.Crossbow);
-        System.out.println("\t\tYou are carrying a shotgun: "+ this.Shotgun);
-        System.out.println("\t\tYou are carrying a pistol: "+ this.Pistol);
     }
 }
