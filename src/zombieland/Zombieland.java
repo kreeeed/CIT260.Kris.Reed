@@ -19,7 +19,9 @@ public class Zombieland {
     String instructions = "";
     public static void main(String[] args) {
       Zombieland myGame = new Zombieland();
+
       HelpMenuView helpMe = new HelpMenuView();
       helpMe.getInput();
+
     }
 }
