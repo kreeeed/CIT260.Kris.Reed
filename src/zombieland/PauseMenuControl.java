@@ -1,0 +1,36 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package zombieland;
+
+
+/**
+ *
+ * @author K-Reed
+ */
+public class PauseMenuControl {
+    
+public PauseMenuControl() {
+}
+  
+
+
+
+public void startNewGame() {
+        System.out.println("\n\tstartNewGame() called");
+        Game game=new Game();
+        game.playGame();
+    }
+    
+    public void displayHelpMenu() {
+       HelpMenuView helpMe = new HelpMenuView();
+      helpMe.getInput();
+    }
+
+    void exitGame() {
+       return;
+    }
+}
+
+
