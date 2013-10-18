@@ -20,8 +20,6 @@ public class Zombieland {
     String instructions = "";
     public static void main(String[] args) {
       Zombieland myGame = new Zombieland();
-      PauseMenuView pauseMenu = new PauseMenuView();
-      pauseMenu.getInput();
       HelpMenuView helpMe = new HelpMenuView();
       helpMe.getInput();
       PauseMenuView pauseMenu = new PauseMenuView();
