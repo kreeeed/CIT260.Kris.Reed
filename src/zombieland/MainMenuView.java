@@ -10,20 +10,21 @@ import java.util.Scanner;
  *
  * @author K-Reed
  */
-class PauseMenuView {
+class MainMenuView {
 
-    public PauseMenuView() {
+    public MainMenuView() {
     }
   private final static String[][] menuItems = {
-        {"S", "Start Over"},
+        {"N", "New Game"},
         {"H", "Help Menu"}, 
-        {"E", "Exit Game"},
-        {"Q", "Quit Menu"},
+        {"P", "Pause Menu"},
+        {"C", "Credits"},
+        {"Q", "Quit Game"},
               
     };
     
     // Create instance of the HelpMenuControl (action) class
-    private PauseMenuControl pauseMenuControl = new PauseMenuControl();
+    private MainMenuControl mainMenuControl = new MainMenuControl();
     
   
     // display the help menu and get the end users input selection
@@ -31,20 +32,23 @@ class PauseMenuView {
         String gameStatus = "PAUSE";
         String command ="";
         do {
-            this.displayPauseMenu();
+            this.displayMainMenu();
             
             // get commaned entered
             command = this.getCommand();
             switch (command) {
-                case "S":
-                    this.pauseMenuControl.startNewGame();
+                case "N":
+                    this.mainMenuControl.startNewGame();
                     break;
                 case "H":
-                    this.pauseMenuControl.displayHelpMenu();
+                    this.mainMenuControl.displayHelpMenu();
                     break;
-                case "E":
-                    this.pauseMenuControl.exitGame();
-                    break;                  
+                case "P":
+                    this.mainMenuControl.displayPauseMenu();
+                    break;   
+                case "C":
+                    this.mainMenuControl.displayCredits();
+                    break;   
                 case "Q": 
                     return "QUIT";
             }
@@ -53,12 +57,12 @@ class PauseMenuView {
          return gameStatus;
     }
 
-        // displays the pause menu
-    public final void displayPauseMenu() {
+        // displays the help menu
+    public final void displayMainMenu() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (int i = 0; i < PauseMenuView.menuItems.length; i++) {
+        for (int i = 0; i < MainMenuView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
@@ -87,7 +91,7 @@ class PauseMenuView {
     
     // determines if the command is valid
     private boolean validCommand(String command) {
-        for (String[] item : PauseMenuView.menuItems) {
+        for (String[] item : MainMenuView.menuItems) {
             if (item[0].equals(command)) {
                 return true;
             }

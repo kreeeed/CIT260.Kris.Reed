@@ -20,10 +20,7 @@ public class Zombieland {
     String instructions = "";
     public static void main(String[] args) {
       Zombieland myGame = new Zombieland();
-      HelpMenuView helpMe = new HelpMenuView();
-      helpMe.getInput();
-      PauseMenuView pauseMenu = new PauseMenuView();
-      pauseMenu.getInput();
-      
+      MainMenuView newMain = new MainMenuView();
+      newMain.getInput();
     }
 }

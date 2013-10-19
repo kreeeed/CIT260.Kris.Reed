@@ -14,7 +14,7 @@ public class HelpMenuView  {
         {"T", "Tutorial"},
         {"H", "Hints"}, 
         {"I", "Items"},
-              
+        {"Q", "Quit Menu"},   
     };
     
     // Create instance of the HelpMenuControl (action) class
