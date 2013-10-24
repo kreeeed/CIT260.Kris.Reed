@@ -20,6 +20,9 @@ public class Zombieland {
     String instructions = "";
     public static void main(String[] args) {
       Zombieland myGame = new Zombieland();
+      KeyPad newKeyPad = new KeyPad();
+      newKeyPad.keyPadGetIn();
+      
       MainMenuView newMain = new MainMenuView();
       newMain.getInput();
     }
