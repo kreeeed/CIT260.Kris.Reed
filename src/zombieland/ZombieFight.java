@@ -39,6 +39,6 @@ public class ZombieFight {
     System.out.println(output);
 }
         return null;
-}
+}}
 
   
