@@ -13,9 +13,12 @@ import java.util.Scanner;
 public class ZombieFight {
    
     public String zombieGun(){
+        int i;
+        for (i=0;i<3;i++){
+            System.out.println("3 packs of zombies are charging!");
         int bullets;
         String output;
-        System.out.println("A pack of zombies are charging you, how many bullets are you going to fire!");
+        System.out.println("A pack of zombies are charging you, how many bullets are you going to fire at each pack!");
             Scanner inFile = new Scanner(System.in);
             bullets=Integer.parseInt(inFile.nextLine());
         if (bullets>=0 && bullets<5){
@@ -34,8 +37,8 @@ public class ZombieFight {
             output ="You don't have that many bullets";
         }
     System.out.println(output);
-    return output;
 }
+        return null;
 }
 
   
