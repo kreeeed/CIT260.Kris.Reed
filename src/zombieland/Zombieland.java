@@ -24,6 +24,8 @@ public class Zombieland {
       newKeyPad.keyPadGetIn();
       ZombieFight newZombieFight = new ZombieFight();
       newZombieFight.zombieGun();
+      HomeStart newHomeStart = new HomeStart();
+      newHomeStart.display();
       MainMenuView newMain = new MainMenuView();
       newMain.getInput();
     }
