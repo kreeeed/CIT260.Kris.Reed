@@ -14,7 +14,27 @@ public class HelpMenuControl  {
     public HelpMenuControl() {
         
     } 
+    public String[] organizeAreas(String[] list){
+        String tmpArea;
+        boolean notDone = true;
+        while(notDone) {
+            
+            notDone = false; // assume that you done
+            for (int i = 0; i < list.length-1; i++) {
+                int compareResult = list[i].compareTo(list[i+1]);
+                if (compareResult > 0) {
+                    // swap names
+                    tmpArea = list[i];
+                    list[i] = list[i+1];
+                    list[i+1] = tmpArea;
+                    notDone = true;
+                } 
+            }
+        }
 
+        return list;
+    }
+    
     public void displayTutorial() {
         System.out.println();
         this.displayHelpBoarder();             

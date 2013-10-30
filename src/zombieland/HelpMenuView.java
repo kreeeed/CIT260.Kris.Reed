@@ -14,9 +14,21 @@ public class HelpMenuView  {
         {"T", "Tutorial"},
         {"H", "Hints"}, 
         {"I", "Items"},
+        {"A", "Areas"},
         {"Q", "Quit Menu"},   
     };
+    String[] areaItems = 
+        {"Home", "Freeway", "Neighbor's House", "Crazy Joe's Gun Store", "Gas Station"};
     
+    public void displayAreas() {
+        System.out.println("\n\t===============================================================");
+        System.out.println("\t Locations found in Zombieland in alphabetical order:");
+
+        for (int i = 0; i < areaItems.length; i++) {
+            System.out.println("\t   " + areaItems[i]);
+        }
+        System.out.println("\t===============================================================\n");
+    }
     // Create instance of the HelpMenuControl (action) class
     private HelpMenuControl helpMenuControl = new HelpMenuControl();
     
@@ -43,7 +55,11 @@ public class HelpMenuView  {
                     break;
                 case "I":
                     this.helpMenuControl.displayItems();
-                    break;                  
+                    break;       
+                case "A":
+                    this.helpMenuControl.organizeAreas(areaItems);
+                    this.displayAreas();
+                    break;   
                 case "Q": 
                     return "QUIT";
             }
