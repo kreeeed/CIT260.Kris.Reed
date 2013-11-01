@@ -13,8 +13,15 @@ public class MainMenuControl {
     
 public MainMenuControl() {
 }
-  
+   double[] foreach = {8, 9, 12,25,50,10,22};
 
+ public void displayForeach() {
+        System.out.println(foreach);
+        int sum = 0;
+         for (int k = 0; k < foreach.length; k++) { 
+         sum += foreach[k];
+         System.out.println(sum);
+         }}
 
 
 public void startNewGame() {
