@@ -18,7 +18,7 @@ public class HelpMenuView  {
         {"Q", "Quit Menu"},   
     };
     String[] areaItems = 
-        {"Home", "Freeway", "Neighbor's House", "Crazy Joe's Gun Store", "Gas Station"};
+        {"Home", "Freeway", "Neighbor's House", "Crazy Joe's", "Gas Station"};
     
     public void displayAreas() {
         System.out.println("\n\t===============================================================");
