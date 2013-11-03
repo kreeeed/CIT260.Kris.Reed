@@ -19,12 +19,15 @@ class MainMenuView {
         {"H", "Help Menu"}, 
         {"P", "Pause Menu"},
         {"C", "Credits"},
+        {"F", "ForEachFunction"},
         {"Q", "Quit Game"},
               
     };
-    
-    // Create instance of the HelpMenuControl (action) class
+     // Create instance of the HelpMenuControl (action) class
     private MainMenuControl mainMenuControl = new MainMenuControl();
+  
+
+ 
     
   
     // display the help menu and get the end users input selection
@@ -49,6 +52,9 @@ class MainMenuView {
                 case "C":
                     this.mainMenuControl.displayCredits();
                     break;   
+                    case "F":
+                    this.mainMenuControl.displayForeach();
+                    break;
                 case "Q": 
                     return "QUIT";
             }
@@ -57,6 +63,8 @@ class MainMenuView {
          return gameStatus;
     }
 
+      
+    
         // displays the help menu
     public final void displayMainMenu() {
         System.out.println("\n\t===============================================================");
