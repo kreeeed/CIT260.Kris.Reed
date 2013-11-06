@@ -64,7 +64,7 @@ public class HelpMenuControl  {
         System.out.println();
         displayHelpBoarder();     
         
-               if (Items.crowbar == true){
+        if (Items.crowbar == true){
             System.out.println("\n\t You are carrying a crowbar.");
         }
         if (Items.gun == true){

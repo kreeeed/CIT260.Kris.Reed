@@ -21,15 +21,7 @@ public MainMenuControl() {
          for (int k = 0; k < foreach.length; k++) { 
          sum += foreach[k];
          System.out.println(sum);
-         }}
-
-
-public void startNewGame() {
-        System.out.println("\n\tstartNewGame() called");
-        Game game=new Game();
-        game.playGame();
-    }
-    
+         }}    
     public void displayHelpMenu() {
        HelpMenuView helpMe = new HelpMenuView();
       helpMe.getInput();

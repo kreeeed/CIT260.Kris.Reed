@@ -19,12 +19,7 @@ public class Zombieland {
     String name;
     String instructions = "";
     public static void main(String[] args) {
-      Zombieland myGame = new Zombieland();
-      KeyPad newKeyPad = new KeyPad();
-      newKeyPad.keyPadGetIn();
-      ZombieFight newZombieFight = new ZombieFight();
-      newZombieFight.zombieGun();
-      HomeStart newHomeStart = new HomeStart();
+      HomeArea newHomeStart = new HomeArea();
       newHomeStart.display();
       MainMenuView newMain = new MainMenuView();
       newMain.getInput();
