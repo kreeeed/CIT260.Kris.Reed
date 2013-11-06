@@ -19,7 +19,7 @@ public class Zombieland {
     String name;
     String instructions = "";
     public static void main(String[] args) {
-      HomeArea newHomeStart = new HomeArea();
+      HomeAreaView newHomeStart = new HomeAreaView();
       newHomeStart.display();
       MainMenuView newMain = new MainMenuView();
       newMain.getInput();
