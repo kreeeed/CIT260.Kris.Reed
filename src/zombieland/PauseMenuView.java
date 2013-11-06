@@ -37,8 +37,9 @@ class PauseMenuView {
             command = this.getCommand();
             switch (command) {
                 case "S":
-                    this.pauseMenuControl.startNewGame();
-                    break;
+                    StartNewGame.NewGame();
+                    command = "Q";
+                    continue;
                 case "H":
                     this.pauseMenuControl.displayHelpMenu();
                     break;
