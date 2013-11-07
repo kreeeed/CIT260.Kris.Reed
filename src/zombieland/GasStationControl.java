@@ -36,6 +36,7 @@ public class GasStationControl {
        System.out.println(
                "\n\tYou now have a gas can!"
               );
+       Items.gas=true;
     }
     void exitGame() {
        return;
