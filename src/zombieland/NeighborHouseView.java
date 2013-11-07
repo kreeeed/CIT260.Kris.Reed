@@ -12,14 +12,14 @@ import java.util.Scanner;
  */
 public class NeighborHouseView {
     private final static String[][] menuItems = {
-        {"H", "Go Back to your House"},
         {"K", "Search the House for the Car Keys"},
         {"G", "Search the Garage for the Car Keys"},
+        {"A", "Go Back to your Apartment"},
         {"H", "Hide in a closet"},
         {"P", "Pause Menu"},        
         {"Q", "Quit"}        
     };
-     private MainMenuControl mainMenuControl = new MainMenuControl();
+     private NeighborHouseControl neighborHouseControl = new NeighborHouseControl();
   
 
  
@@ -30,25 +30,25 @@ public class NeighborHouseView {
         String gameStatus = "PAUSE";
         String command ="";
         do {
-            this.displayNeighborsHouse();
+            this.display();
             
             // get commaned entered
             command = this.getCommand();
             switch (command) {
-                case "N":
-                    this.mainMenuControl.startNewGame();
+                case "K":
+                    this.neighborHouseControl.displaySearchHouse();
+                    break;
+                case "G":
+                    this.neighborHouseControl.displaySearchGarage();
+                    break;
+                case "A":
+                    command = "Q";
                     break;
                 case "H":
-                    this.mainMenuControl.displayHelpMenu();
-                    break;
+                    this.neighborHouseControl.displayHide();
+                    break;   
                 case "P":
-                    this.mainMenuControl.displayPauseMenu();
-                    break;   
-                case "C":
-                    this.mainMenuControl.displayCredits();
-                    break;   
-                    case "F":
-                    this.mainMenuControl.displayForeach();
+                    this.neighborHouseControl.displayPause();
                     break;
                 case "Q": 
                     return "QUIT";
@@ -60,7 +60,11 @@ public class NeighborHouseView {
     
     public final void display() {
         System.out.println("\n\t===============================================================");
-         System.out.println("\n\tYou enter the front door. You hear loud banging coming from the Garage, and the house is kind of a mess.");
+         System.out.println("\n\t As you walk over to your neighbor's house, you notice his car is "
+                 + "\n\t still in the driveway, but the keys aren't in it. You hear loud banging "
+                 + "\n\t coming from the garage, which is luckily closed. You know his car is "
+                 + "\n\t reliable. Time to find some car keys. The front door is ajar and the "
+                 + "house is kind of a mess.");
         System.out.println("\tWhat is your next move?");
 
         for (int i = 0; i < NeighborHouseView.menuItems.length; i++) {
