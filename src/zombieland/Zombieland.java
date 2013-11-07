@@ -16,11 +16,7 @@ public class Zombieland {
     /**
      * @param args the command line arguments
      */
-    String name;
-    String instructions = "";
     public static void main(String[] args) {
-      HomeAreaView newHomeStart = new HomeAreaView();
-      newHomeStart.display();
       MainMenuView newMain = new MainMenuView();
       newMain.getInput();
     }
