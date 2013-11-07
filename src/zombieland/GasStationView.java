@@ -19,7 +19,7 @@ public class GasStationView {
         {"P", "Pause Menu"},        
         {"Q", "Quit"}        
     };
-     private MainMenuControl mainMenuControl = new MainMenuControl();
+     private GasStationControl GasStationControl = new GasStationControl();
   
 
  
@@ -35,20 +35,20 @@ public class GasStationView {
             // get commaned entered
             command = this.getCommand();
             switch (command) {
-                case "N":
-                    this.mainMenuControl.startNewGame();
-                    break;
                 case "H":
-                    this.mainMenuControl.displayHelpMenu();
+                    this.GasStationControl.displayHomeArea();
+                    break;
+                case "M":
+                    this.GasStationControl.displayRegister();
                     break;
                 case "P":
-                    this.mainMenuControl.displayPauseMenu();
+                    this.GasStationControl.displayPauseMenu();
                     break;   
-                case "C":
-                    this.mainMenuControl.displayCredits();
+                case "D":
+                    this.GasStationControl.displayDrink();
                     break;   
-                    case "F":
-                    this.mainMenuControl.displayForeach();
+                    case "G":
+                    this.GasStationControl.displayGasCan();
                     break;
                 case "Q": 
                     return "QUIT";
@@ -58,7 +58,7 @@ public class GasStationView {
          return gameStatus;
     }
     
-    public final void display() {
+    public final void displayGasStation() {
         System.out.println("\n\t===============================================================");
         System.out.println("\n\tHopefully there is some gas to be pumped");
         System.out.println("\tMake a choice:");
