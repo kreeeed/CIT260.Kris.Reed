@@ -19,7 +19,7 @@ public class JoesGunView {
         {"P", "Pause Menu"},        
         {"Q", "Quit"}        
     };
-     private MainMenuControl mainMenuControl = new MainMenuControl();
+     private JoesGunControl JoesGunControl = new JoesGunControl();
   
 
  
@@ -35,20 +35,20 @@ public class JoesGunView {
             // get commaned entered
             command = this.getCommand();
             switch (command) {
-                case "N":
-                    this.mainMenuControl.startNewGame();
-                    break;
                 case "H":
-                    this.mainMenuControl.displayHelpMenu();
+                    this.JoesGunControl.displayHomeArea();
+                    break;
+                case "B":
+                    this.JoesGunControl.displayBathroom();
                     break;
                 case "P":
-                    this.mainMenuControl.displayPauseMenu();
+                    this.JoesGunControl.displayPauseMenu();
                     break;   
-                case "C":
-                    this.mainMenuControl.displayCredits();
+                case "A":
+                    this.JoesGunControl.displayAttic();
                     break;   
-                    case "F":
-                    this.mainMenuControl.displayForeach();
+                    case "S":
+                    this.JoesGunControl.displayGunSafe();
                     break;
                 case "Q": 
                     return "QUIT";

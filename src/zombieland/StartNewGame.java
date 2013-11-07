@@ -32,6 +32,7 @@ public class StartNewGame {
                 "\n\t apartment.");
         HomeAreaView newStart = new HomeAreaView();
         newStart.display();
+                
 }
     
 }
