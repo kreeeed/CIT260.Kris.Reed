@@ -30,7 +30,7 @@ public class JoesGunView {
         String gameStatus = "PAUSE";
         String command ="";
         do {
-            this.displayJoesGun();
+            this.display();
             
             // get commaned entered
             command = this.getCommand();
