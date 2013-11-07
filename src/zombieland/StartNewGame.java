@@ -30,8 +30,9 @@ public class StartNewGame {
                 "\n\t Sweat begins to form on your brow. You can't help but be grateful you slept in today. Otherwise you" +
                 "\n\t might have already been infected. Pulling yourself together, you get dressed and take stock of your" +
                 "\n\t apartment.");
-        HomeArea newStart = new HomeArea();
+        HomeAreaView newStart = new HomeAreaView();
         newStart.display();
+                
 }
     
 }

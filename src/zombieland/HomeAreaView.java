@@ -10,7 +10,10 @@ import java.util.Scanner;
  *
  * @author Cheyenne
  */
-public class HomeAreaView {
+class HomeAreaView{
+public HomeAreaView() {
+    
+}
     private final static String[][] menuItems = {
         {"F", "Go to the freeway"},
         {"N", "Check out the Neighbor's house"},
@@ -21,7 +24,7 @@ public class HomeAreaView {
         {"P", "Pause Menu"},        
         {"Q", "Quit"}        
     };
-     private MainMenuControl mainMenuControl = new MainMenuControl();
+     private HomeAreaControl homeAreaControl = new HomeAreaControl();
   
 
  
@@ -32,26 +35,32 @@ public class HomeAreaView {
         String gameStatus = "PAUSE";
         String command ="";
         do {
-            this.displayHomeArea();
+            this.display();
             
             // get commaned entered
             command = this.getCommand();
             switch (command) {
-                case "N":
-                    this.mainMenuControl.startNewGame();
+                case "J":
+                    this.homeAreaControl.displayJoesGun();
                     break;
-                case "H":
-                    this.mainMenuControl.displayHelpMenu();
+                case "N":
+                    this.homeAreaControl.displayNeighborsHouse();
                     break;
                 case "P":
-                    this.mainMenuControl.displayPauseMenu();
+                    this.homeAreaControl.displayPauseMenu();
                     break;   
-                case "C":
-                    this.mainMenuControl.displayCredits();
-                    break;   
-                    case "F":
-                    this.mainMenuControl.displayForeach();
+                case "F":
+                    this.homeAreaControl.displayFreeway();
+                    break;  
+                    case "G":
+                    this.homeAreaControl.displayGasStation();
                     break;
+                        case "H":
+                    this.homeAreaControl.displayCloset();
+                    break;   
+               case "D":
+                    this.homeAreaControl.displaySink();
+                    break; 
                 case "Q": 
                     return "QUIT";
             }
