@@ -26,11 +26,11 @@ public class StartNewGame {
                 "\n\t water supplies. Do not drink water from faucets. People infected will show immediate signs such as" +
                 "\n\t muscle spasms, lack of control, inability to speak and homicidal tendencies. They will attack other" +
                 "\n\t people on sight with bare hands, biting their victims. After a few hours, they will show signs of " +
-                "\n\t deterioration.” The messages loops again. And again. And again." +
+                "\n\t deterioration.” The messages loops again. And again. And again.\n" +
                 "\n\t Sweat begins to form on your brow. You can't help but be grateful you slept in today. Otherwise you" +
                 "\n\t might have already been infected. Pulling yourself together, you get dressed and take stock of your" +
                 "\n\t apartment.");
-        HomeArea newStart = new HomeArea();
+        HomeAreaView newStart = new HomeAreaView();
         newStart.display();
 }
     

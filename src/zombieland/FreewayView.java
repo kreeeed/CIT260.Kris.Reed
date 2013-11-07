@@ -12,15 +12,14 @@ import java.util.Scanner;
  */
 public class FreewayView {
     private final static String[][] menuItems = {
-        {"F", "Go to the freeway"},
-        {"N", "Check out the Neighbor's house"},
-        {"J", "Go to Crazy Joe's Gun Store"},
-        {"G", "Go to the Gas Station"},
-        {"H", "Hide in a closet"},
+        {"W", "Leave town on foot via the Freeway"},
+        {"D", "Drive out of town (requires a car)"},
+        {"L", "Look around for a car to drive"},
+        {"G", "Go back to your apartment."},
         {"P", "Pause Menu"},        
         {"Q", "Quit"}        
     };
-     private MainMenuControl mainMenuControl = new MainMenuControl();
+     private FreewayControl freewayControl = new FreewayControl();
   
 
  
@@ -31,26 +30,26 @@ public class FreewayView {
         String gameStatus = "PAUSE";
         String command ="";
         do {
-            this.displayFreeway();
+            this.display();
             
             // get commaned entered
             command = this.getCommand();
             switch (command) {
-                case "N":
-                    this.mainMenuControl.startNewGame();
+                case "W":
+                    this.freewayControl.displayWalk();
                     break;
-                case "H":
-                    this.mainMenuControl.displayHelpMenu();
+                case "D":
+                    this.freewayControl.displayDrive();
                     break;
+                case "L":
+                    this.freewayControl.displayLook();
+                    break;
+                case "G":
+                    this.freewayControl.displayHome();
+                    break;   
                 case "P":
-                    this.mainMenuControl.displayPauseMenu();
+                    this.freewayControl.displayPause();
                     break;   
-                case "C":
-                    this.mainMenuControl.displayCredits();
-                    break;   
-                    case "F":
-                    this.mainMenuControl.displayForeach();
-                    break;
                 case "Q": 
                     return "QUIT";
             }
@@ -60,7 +59,10 @@ public class FreewayView {
     }
     
     public final void display() {
-        System.out.println("\n\t===============================================================");
+        System.out.println("\n\t==============================================================="
+                + "\n\t You approach the freeway out of town. Cars are parked almost randomly."
+                + "\n\t Several appear to have bodies in them. There is a gap large enough "
+                + "\n\t to fit a car through. ");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
         for (int i = 0; i < FreewayView.menuItems.length; i++) {
