@@ -19,10 +19,9 @@ public HomeAreaView() {
         {"N", "Check out the Neighbor's house"},
         {"J", "Go to Crazy Joe's Gun Store"},
         {"G", "Go to the Gas Station"},
-        {"D", "You're thirsty, drink water from the faucet"},
+        {"D", "Grab drink water from the faucet"},
         {"H", "Hide in a closet"},
-        {"P", "Pause Menu"},        
-        {"Q", "Quit"}        
+        {"P", "Pause Menu"},      
     };
      private HomeAreaControl homeAreaControl = new HomeAreaControl();
   
@@ -61,8 +60,6 @@ public HomeAreaView() {
                case "D":
                     this.homeAreaControl.displaySink();
                     break; 
-                case "Q": 
-                    return "QUIT";
             }
         } while (!command.equals("Q"));  
         
@@ -70,8 +67,11 @@ public HomeAreaView() {
     }
     
     public final void display() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter of your next decision:");
+        System.out.println("\n\t==============================================================="
+                + "\n\t You live in a small studio apartment. The only thing useful here is the "
+                + "\n\t seventy-two hour emergency kit your mom got you last christmas. After "
+                + "\n\t thinking for a moment, you come up with a few ideas of places you could go.");
+        System.out.println("\n\tEnter the letter of your next decision:");
 
         for (int i = 0; i < HomeAreaView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);

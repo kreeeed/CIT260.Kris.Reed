@@ -16,8 +16,7 @@ public class FreewayView {
         {"D", "Drive out of town (requires a car)"},
         {"L", "Look around for a car to drive"},
         {"G", "Go back to your apartment."},
-        {"P", "Pause Menu"},        
-        {"Q", "Quit"}        
+        {"P", "Pause Menu"},              
     };
      private FreewayControl freewayControl = new FreewayControl();
   
@@ -27,7 +26,7 @@ public class FreewayView {
   
     // display the help menu and get the end users input selection
     public String getInput() {       
-        String gameStatus = "PAUSE";
+        String gameStatus = "RUN";
         String command ="";
         do {
             this.display();
@@ -36,28 +35,29 @@ public class FreewayView {
             command = this.getCommand();
             switch (command) {
                 case "W":
-                    this.freewayControl.displayWalk();
+                    command = this.freewayControl.displayWalk();
                     break;
                 case "D":
                     this.freewayControl.displayDrive();
                     break;
                 case "L":
-                    this.freewayControl.displayLook();
+                    command = this.freewayControl.displayLook();
                     break;
                 case "G":
-                    this.freewayControl.displayHome();
+                    command = "Q";
                     break;   
                 case "P":
                     this.freewayControl.displayPause();
                     break;   
-                case "Q": 
-                    return "QUIT";
             }
-        } while (!command.equals("Q"));  
-        
+        } while (!command.equals("Q") && !command.equals("Dead"));  
+        if (!command.equals("Q")){
          return gameStatus;
-    }
-    
+        }
+        else{
+            return command;
+        }
+}     
     public final void display() {
         System.out.println("\n\t==============================================================="
                 + "\n\t You approach the freeway out of town. Cars are parked almost randomly."

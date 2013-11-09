@@ -17,10 +17,7 @@ public class JoesGunControl {
     }   
     public void displayBathroom() {
        System.out.println(
-               "\n\t That was the wrong place to go!"
-               + "\n\t A rogue zombie has charged the store "
-               + "\n\t\t\t And you have no way to defend yourself"
-               + "\n\t You have been infected.");
+               "\n\t ");
     }
     
     public void displayPauseMenu() {
@@ -28,7 +25,8 @@ public class JoesGunControl {
       gamePause.getInput();
     }
     public void displayGunSafe() {
-       KeyPad Keypad = new KeyPad();
+       KeyPad newKeypad = new KeyPad();
+       newKeypad.keyPadGetIn();
     }
     public void displayAttic() {
        System.out.println(
@@ -36,9 +34,6 @@ public class JoesGunControl {
                + "\n\t A rogue zombie has charged the store "
                + "\n\t\t\t And you have no way to defend yourself"
                + "\n\t You have been infected.");
-    }
-    void exitGame() {
-       return;
     }
 }
 

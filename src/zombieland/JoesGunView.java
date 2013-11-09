@@ -12,12 +12,11 @@ import java.util.Scanner;
  */
 public class JoesGunView {
     private final static String[][] menuItems = {
-        {"H", "Go Back to the House"},
         {"S", "Try to open the Safe"},
         {"A", "Check the Attic for a Gun"},
         {"B", "Hide in the Bathroom"},
-        {"P", "Pause Menu"},        
-        {"Q", "Quit"}        
+        {"G", "Go Back to the Apartment"},
+        {"P", "Pause Menu"},              
     };
      private JoesGunControl JoesGunControl = new JoesGunControl();
   
@@ -34,24 +33,22 @@ public class JoesGunView {
             
             // get commaned entered
             command = this.getCommand();
-            switch (command) {
-                case "H":
-                    this.JoesGunControl.displayHomeArea();
-                    break;
-                case "B":
-                    this.JoesGunControl.displayBathroom();
-                    break;
-                case "P":
-                    this.JoesGunControl.displayPauseMenu();
-                    break;   
+            switch (command) {  
                 case "A":
                     this.JoesGunControl.displayAttic();
                     break;   
-                    case "S":
+                case "S":
                     this.JoesGunControl.displayGunSafe();
                     break;
-                case "Q": 
-                    return "QUIT";
+                case "B":
+                    this.JoesGunControl.displayBathroom();
+                    break; 
+                case "G":
+                    command="Q";
+                    break;
+                case "P":
+                    this.JoesGunControl.displayPauseMenu();
+                    break;
             }
         } while (!command.equals("Q"));  
         

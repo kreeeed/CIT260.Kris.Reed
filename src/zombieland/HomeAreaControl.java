@@ -12,40 +12,46 @@ public class HomeAreaControl {
   public HomeAreaControl() {
 }
     public void displayJoesGun() {
-       JoesGunView helpMe = new JoesGunView();
-      helpMe.getInput();
+       JoesGunView newJoes = new JoesGunView();
+      newJoes.getInput();
     }   
     public void displayNeighborsHouse() {
-       NeighborHouseView helpMe = new NeighborHouseView();
-      helpMe.getInput();
+       NeighborHouseView newNeighbor = new NeighborHouseView();
+      newNeighbor.getInput();
     } 
     public void displayFreeway() {
-       FreewayView helpMe = new FreewayView();
-      helpMe.getInput();
+       FreewayView newFreeway = new FreewayView();
+      newFreeway.getInput();
     } 
     public void displayGasStation() {
-       GasStationView helpMe = new GasStationView();
-      helpMe.getInput();
+       GasStationView newGas = new GasStationView();
+      newGas.getInput();
     } 
-    public void displayCloset() {
+    public String displayCloset() {
        System.out.println(
-               "\n\t That was the wrong place to go!"
-               + "\n\t Zombies swarm your house "
-               + "\n\t\t\t And you have no way to defend yourself"
-               + "\n\t You have been infected.");
+               "\n\t You grab your seventy-two hour kit and hide in the closet, "
+               + "\n\t only coming out to use the bathroom. The water runs out "
+               + "\n\t faster than you thought it would. Just when you are about "
+               + "\n\t to get up the nerve to leave, you hear the sound of an "
+               + "\n\t airplane flying close overhead. You get to the window in "
+               + "\n\t time to see a flash of light before you are incinerated "
+               + "\n\t by a nuclear blast."
+               + "\n\t\t\t\t\t THE END ");
+       return "Dead";
     }
-public void displaySink() {
+public String displaySink() {
        System.out.println(
-               "\n\t You know you're not suppose to drink the water!"
-               + "\n\t You should have listened to that radio broadast better."
-               + "\n\t You have been infected ");
+               "You go to the sink a nd fill a glass with water. As you take a swig you "
+              + "\n\t feel like there's something you were supposed to remember about the "
+              + "\n\t tap water. Suddenly, your stomach feels odd. At that moment, you"
+              + "\n\t remember that the emergency broadcast said that the water is infected."
+              + "\n\t This realization comes to late.You can already feel the virus taking "
+              + "\n\t control of your body."
+              + "\n\t\t\t\t\t THE END");
+      return "Dead";
     }    
     public void displayPauseMenu() {
        PauseMenuView gamePause = new PauseMenuView();
       gamePause.getInput();
-    }
-    
-    void exitGame() {
-       return;
     }
 }

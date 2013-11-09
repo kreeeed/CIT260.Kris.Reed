@@ -31,7 +31,7 @@ public class StartNewGame {
                 "\n\t might have already been infected. Pulling yourself together, you get dressed and take stock of your" +
                 "\n\t apartment.");
         HomeAreaView newStart = new HomeAreaView();
-        newStart.display();
+        newStart.getInput();
                 
 }
     

@@ -39,9 +39,9 @@ public class FreewayControl  {
                 + "\n\t a matter of time until the zombies get you."
                 + "\n\t\t\t\t THE END");
         }
-        return "Q";
+        return "Dead";
     }
-    public void displayDrive(){
+    public String displayDrive(){
         if(Items.car==true){
             System.out.println("\n\t==============================================================="
                     + "\n\t You carefully manuever between cars, working your way through to the open freeway"
@@ -49,10 +49,12 @@ public class FreewayControl  {
                     + "\n\t You tune the radio in to the emergency broadcast system and get directions to the "
                     + "\n\t nearest safe location. You get a feeling that everything is going to turn out okay."
                     + "\n\t\t\t\t\t THE END");
+            return "Win";
         }
         else{
             System.out.println("\n\t==============================================================="
                     + "\n\t You can't drive a car you don't have.");
+            return null;
         }
     }
     public String displayLook(){
@@ -63,7 +65,7 @@ public class FreewayControl  {
                 + "\n\t appears in it. You try to whirl around to fend it off, but it's too late. You've been biten."
                 + "\n\t You almost immediately feel yourself loose control as the virus takes over your body."
                 + "\n\t\t\t\t\t THE END");
-        return "Q";
+        return "Dead";
     }
     public String displayHome(){
         return "Q";
