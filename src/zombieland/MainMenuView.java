@@ -41,7 +41,7 @@ class MainMenuView {
             command = this.getCommand();
             switch (command) {
                 case "N":
-                    StartNewGame.NewGame();
+                    this.mainMenuControl.displayStartNewGame();
                     break;
                 case "H":
                     this.mainMenuControl.displayHelpMenu();

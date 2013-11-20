@@ -10,11 +10,11 @@ import java.util.Scanner;
  *
  * @author Cheyenne
  */
-class HomeAreaView{
+public class HomeAreaView extends SuperAreaView{
 public HomeAreaView() {
-    
+    super(HomeAreaView.menuItems);
 }
-    private final static String[][] menuItems = {
+private final static String[][] menuItems = {
         {"F", "Go to the freeway"},
         {"N", "Check out the Neighbor's house"},
         {"J", "Go to Crazy Joe's Gun Store"},
@@ -64,8 +64,7 @@ public HomeAreaView() {
         } while (!command.equals("Q"));  
         
          return gameStatus;
-    }
-    
+    }  
     public final void display() {
         System.out.println("\n\t==============================================================="
                 + "\n\t You live in a small studio apartment. The only thing useful here is the "
@@ -73,12 +72,9 @@ public HomeAreaView() {
                 + "\n\t thinking for a moment, you come up with a few ideas of places you could go.");
         System.out.println("\n\tEnter the letter of your next decision:");
 
-        for (int i = 0; i < HomeAreaView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\t===============================================================\n");
     }
-     protected final String getCommand() {
+   @Override
+   protected String getCommand() {
         Scanner inFile = new Scanner(System.in);
         String command;
         boolean valid = false;

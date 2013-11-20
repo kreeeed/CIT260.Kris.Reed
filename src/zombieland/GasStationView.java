@@ -10,7 +10,10 @@ import java.util.Scanner;
  *
  * @author K-Reed
  */
-public class GasStationView {
+public class GasStationView extends SuperAreaView  {
+    public GasStationView(){
+         super(GasStationView.menuItems);
+    }
     private final static String[][] menuItems = {
         {"D", "Grab a Drink from the soda fountain"},
         {"G", "Grab the Gas Can and fill it up"},
@@ -66,12 +69,10 @@ public class GasStationView {
                 + "\n\t across the room.");
         System.out.println("\t Make a choice:");
 
-        for (int i = 0; i < GasStationView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\t===============================================================\n");
+     
     }
-     protected final String getCommand() {
+    @Override
+      protected String getCommand() {
         Scanner inFile = new Scanner(System.in);
         String command;
         boolean valid = false;
