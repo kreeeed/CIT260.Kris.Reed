@@ -4,6 +4,8 @@
  */
 package zombieland;
 
+import zombieland.Areas.FreewayView;
+
 /**
  *
  * @author K-Reed
