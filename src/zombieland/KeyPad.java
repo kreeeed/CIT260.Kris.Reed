@@ -49,7 +49,7 @@ public class KeyPad {
             Scanner inFile = new Scanner(System.in);
             String numin = inFile.nextLine();
             while (!"0".equals(numin) && !"1".equals(numin) && !"2".equals(numin) && !"3".equals(numin) && !"4".equals(numin) && !"5".equals(numin) && !"6".equals(numin) && !"7".equals(numin) && !"8".equals(numin) && !"9".equals(numin)){
-                System.out.println("Error. Please enter a digit between 0 and 9.");
+                System.out.println("KeyPadException Error Try Again");
                 inFile = new Scanner(System.in);
                 numin = inFile.nextLine();
             }
